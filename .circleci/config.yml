@@ -1,5 +1,7 @@
----
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@3.0.0
+
 jobs:
   node-latest: &test
     docker:
@@ -47,7 +49,6 @@ jobs:
             - /usr/local/share/.config/yarn
 
 workflows:
-  version: 2
   "mm":
     jobs:
       - node-latest
